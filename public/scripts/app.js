@@ -36,7 +36,7 @@ function handleSuccess(players) {
 
 function handlePostSuccess (players) {
   console.log('post success');
-  renderPlayer(player);
+  renderPlayer(players);
 };
 
 
@@ -47,7 +47,7 @@ function handleError(err){
 
 function renderPlayer(player){
   console.log('rendering player', player);
-  var age = new Date().getFullYear() - parseInt(player.age);
+  var age = new Date().getFullYear() - parseInt(player.yearOfBirth);
 
 $('#players').append(`
 

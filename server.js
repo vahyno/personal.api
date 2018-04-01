@@ -28,6 +28,8 @@ app.get('/api', controllers.api.index);
 
 app.get('/api/players', controllers.players.index);
 
+app.post('/api/players', controllers.players.create);
+
 
 
 // server start

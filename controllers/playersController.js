@@ -3,23 +3,23 @@ var db = require("../models");
 // var sample_players = [{
 //   name: 'teddy',
 //   height: '5ft4',
-//   age: 1976,
+//   yearOfBirth: 1976,
 //   skills: 'slow, big belly'
 // },
 // {
 //   name: 'jim',
 //   height: '5ft10',
-//   age: 1976,
+//   yearOfBirth: 1976,
 //   skills: 'fast, big belly'
 // },{
 //   name: 'jumper',
 //   height: '5ft7',
-//   age: 1974,
+//   yearOfBirth: 1974,
 //   skills: 'good at free throws, big belly'
 // },{
 //   name: 'rock',
 //   height: '5ft',
-//   age: 1975,
+//   yearOfBirth: 1975,
 //   skills: 'slow, big belly'
 // }];
 //
