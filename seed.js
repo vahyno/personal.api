@@ -2,7 +2,7 @@ var db = require('./models');
 
 
 var real_players = [{
-  name: 'teddy',
+  name: 'teddy bear',
   height: '5ft4',
   age: 1976,
   skills: 'slow, big belly'
@@ -25,9 +25,9 @@ var real_players = [{
 }];
 
 db.Player.remove({}, function(err, players){
-  // code in here runs after all albums are removed
+  // code in here runs after all players are removed
   db.Player.create(real_players, function(err, players){
-    // code in here runs after all albums are created
+    // code in here runs after all players are created
     if (err) { return console.log('ERROR', err); }
     console.log("all players:", players);
     console.log("created", players.length, "players");

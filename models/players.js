@@ -6,7 +6,7 @@ var Schema = mongoose.Schema;
 var PlayersSchema = new Schema({
   name: String,
   height: String,
-  dob: Number,
+  age: Number,
   skills: String
 
 });

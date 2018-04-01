@@ -11,6 +11,20 @@ $(document).ready(function() {
     error: handleError
   });
 
+  $('#player-form').on('submit', function(event){
+    event.preventDefault();
+    var formData = $(this).serialize();
+    console.log(formData);
+    this.reset();
+
+    $.ajax({
+      method: 'POST',
+      url: '/api/players',
+      data: formData,
+      success: handlePostSuccess,
+      error: handleError
+    });
+  });
 
 }); // doc ready ends here
 
@@ -20,6 +34,12 @@ function handleSuccess(players) {
     });
 };
 
+function handlePostSuccess (players) {
+  console.log('post success');
+  renderPlayer(player);
+};
+
+
 function handleError(err){
   console.log('There has been an error: ', err);
 }
@@ -27,7 +47,7 @@ function handleError(err){
 
 function renderPlayer(player){
   console.log('rendering player', player);
-  var age = new Date().getFullYear() - player.age;
+  var age = new Date().getFullYear() - parseInt(player.age);
 
 $('#players').append(`
 
