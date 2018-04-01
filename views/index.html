@@ -1,23 +1,133 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
   <head>
     <meta charset="utf-8">
+
+    <!-- set viewport to device width to allow responsiveness -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Personal API</title>
-
-    <!-- STYLESHEETS -->
+    <!-- Bootstrap JS and Bootstrap CSS from CDN -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="/styles/styles.css">
 
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <!-- VENDOR SCRIPTS -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <!-- APPLICATION SCRIPTS -->
-    <script src="scripts/app.js"></script>
+    <!-- link to custom stylesheet (always require after external CSS libraries like Bootstrap's CSS) -->
+
+    <script type="text/javascript" src="scripts/app.js"></script>
+
+    <link href="/styles/styles.css" type=text/css rel=stylesheet>
+
+    <title>Touch Of Gray Hoops</title>
   </head>
   <body>
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Touch Of Gray Hoops</h1>
+        <p>Your leaque rooster</p>
+      </div>
+    </div>
+    <!-- Form start-->
+    <section class="container">
+         <div class="row">
+         <div class="col-md-10 col-md-offset-1">
 
+           <form id='album-form' class="form-horizontal">
+             <fieldset>
+
+               <!-- Form Name -->
+               <legend>Add New Player</legend>
+
+               <!-- Text input-->
+               <div class="form-group">
+                 <label class="col-md-4 control-label" for="name">Player Name:</label>
+                 <div class="col-md-4">
+                 <input id="name" name="name" type="text" placeholder="Jumpy Jumperson" class="form-control input-md" required="">
+
+                 </div>
+               </div>
+
+               <!-- Text input-->
+               <div class="form-group">
+                 <label class="col-md-4 control-label" for="height">Height:</label>
+                 <div class="col-md-4">
+                   <input id="height" name="height" type="text" placeholder="6ft3" class="form-control input-md" required>
+
+                 </div>
+               </div>
+
+               <!-- Text input-->
+               <div class="form-group">
+                 <label class="col-md-4 control-label" for="dob">Year of birth:</label>
+                 <div class="col-md-4">
+                 <input id="textinput" name="dob" type="text" placeholder="1970" class="form-control input-md" required>
+
+                 </div>
+               </div>
+
+               <!-- Textarea -->
+               <div class="form-group">
+                 <label class="col-md-4 control-label" for="skills">Skills:</label>
+                 <div class="col-md-4">
+                   <textarea class="form-control" id="skills" name="skills">fast runner, three point shooter</textarea>
+                 </div>
+               </div>
+
+
+               <!-- Button -->
+               <div class="form-group">
+                 <label class="col-md-4 control-label" for="submitButton">Submit to Save the Player</label>
+                 <div class="col-md-4">
+                   <button id="submitButton" name="submitButton" class="btn btn-primary">Submit</button>
+                 </div>
+               </div>
+             </fieldset>
+           </form>
+         </div>
+         </div>
+       </section>
+    <!-- Form end-->
+        <section class="container">
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+              <h2>Players:</h2>
+            </div>
+          </div>
+          <!-- players -->
+          <div id="players">
+
+              <!-- player -->
+              <div class="col-md-9 col-xs-12">
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    <h4 class='inline-header'>Player Name:</h4>
+                    <span class='player-name'>${ player.name }</span>
+                  </li>
+
+                  <li class="list-group-item">
+                    <h4 class='inline-header'>Height:</h4>
+                    <span class='player-height'>${ player.height }</span>
+                  </li>
+
+                  <li class="list-group-item">
+                    <h4 class='inline-header'>Age:</h4>
+                    <span class='player-age'>${ player.age }</span>
+                  </li>
+
+                  <li class="list-group-item">
+                    <h4 class="inline-header">Skills:</h4>
+                    <span>${ player.skills }</span>
+                  </li>
+
+                </ul>
+              </div>
+
+              <!-- player -->
+
+          </div>
+        </section>
   </body>
 </html>
